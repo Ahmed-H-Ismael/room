@@ -36,12 +36,13 @@
  }
  nav{
     position: absolute;
-    top:10%;
+    top:0%;
     left:0%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding: 35px;
  }
  nav ul{
     list-style: none;
@@ -58,6 +59,7 @@
     color:var(--white-color);
     text-decoration: none;
     position: relative;
+    font-size: 1rem;
  }
  nav ul li a:after{
     position: absolute;
@@ -87,9 +89,13 @@ nav .bar > svg{
    bottom: 0;
    display: flex;
  }
- @media only screen and (min-width: 375px) and (max-width: 992px){
+ @media only screen and (min-width: 375px) and (max-width: 576px){
    nav {
       align-items: baseline;
+      top:0;
+      left: -4%;
+      padding: 0;
+      margin-top: 30px;
    }
    nav .logo{
       text-align: center;
@@ -105,11 +111,11 @@ nav .bar > svg{
    }
    nav ul.active{
       position: absolute;
-      top:-31px;
+      top:0px;
       left:0;
       background-color: var(--white-color);
-      width: 100%;
-      transform: translateY(0px);
+      width: 104%;
+      transform: translateY(-30px);
    }
    nav ul.active li{
       padding: 20px;
