@@ -1,0 +1,235 @@
+:root{
+    --dark-gray-color:hsl(0, 0%, 63%);
+    --black-color:hsl(0, 0%, 0%);
+    --white-color:hsl(0, 0%, 100%);
+    --vdark-gray-color:hsl(0, 0%, 27%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body{
+    font-family: "League Spartan", sans-serif;
+    font-size: 12px;
+ }
+ .one{
+    background-color: var(--white-color);
+    position: relative;
+ }
+ .top-section{
+    display: flex;
+ }
+ .top-section-left{
+   flex-basis: 60%;
+   position: relative;
+ }
+ .top-section-right{
+   flex-basis: 40%;
+ }
+ .top-section-left img{
+    width: 100%;
+    height: 100%;
+    display: none;
+ }
+ nav{
+    position: absolute;
+    top:10%;
+    left:0%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+ }
+ nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: 4rem;
+ }
+ nav ul li{
+    margin: 0 10px;
+ }
+ nav ul li.close{
+   display: none;
+ }
+ nav ul li a{
+    color:var(--white-color);
+    text-decoration: none;
+    position: relative;
+ }
+ nav ul li a:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 15px;
+    background-color: var(--white-color);
+    bottom: -7px;
+    left: 6px;
+    display: none;
+ }
+ nav ul li a:hover::after{
+    display: block;
+ }
+ nav .bar{
+   background-color: transparent;
+   border: 0;
+   cursor: pointer;
+}
+nav .bar > svg{
+   margin: 0;
+   display: none;
+}
+ .buttons{
+   position: absolute;
+   right: -120px;
+   bottom: 0;
+   display: flex;
+ }
+ @media only screen and (min-width: 375px) and (max-width: 992px){
+   nav {
+      align-items: baseline;
+   }
+   nav .logo{
+      text-align: center;
+      margin-right: auto;
+      margin-left: 7rem;
+   }
+   nav ul{
+      transition: all .12s ;
+      transform: translateY(-50px);
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+   }
+   nav ul.active{
+      position: absolute;
+      top:-31px;
+      left:0;
+      background-color: var(--white-color);
+      width: 100%;
+      transform: translateY(0px);
+   }
+   nav ul.active li{
+      padding: 20px;
+   }
+   nav ul.active li.close{
+      display: block;
+      cursor: pointer;
+   }
+   nav ul.active li a{
+      color: var(--black-color);
+   }
+   nav .bar{
+      margin-left: 3rem;
+   }
+   nav .bar > svg{
+      display: block;
+   }
+ }
+ .btn{
+   width: 60px;
+   height: 60px;
+   background-color: var(--black-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   cursor: pointer;
+ }
+ .btn:disabled{
+   cursor: not-allowed;
+   background-color: var(--vdark-gray-color);
+ }
+ .btn:focus{
+   outline: none;
+ }
+ .btn:hover{
+   background-color: var(--vdark-gray-color);
+ }
+ .btn > svg{
+   margin: 0;
+ }
+ .top-section-right{
+    padding: 95px;
+ }
+ .content{
+   display: none;
+ }
+ .img-hero.active{
+   display: block;
+ }
+ .content.active{
+   display: block;
+ }
+ h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+ }
+ p{
+    line-height: 1.6;
+    color: var(--dark-gray-color);
+ }
+ .link{
+    align-items: center;
+ }
+ .shopNow{
+    color: var(--black-color);
+    text-decoration: none;
+    display: flex;
+    margin-top: 1rem;
+    letter-spacing: 12px;
+    font-weight: 700;
+ }
+ svg{
+    fill: var(--black-color);
+    margin-left: 1rem;
+ }
+ .shopNow:hover{
+    color: var(--dark-gray-color);
+ }
+ .shopNow:hover svg{
+    fill: var(--dark-gray-color);
+
+ }
+ .two{
+    display: flex;
+ }
+ .two .img {
+    flex-basis: 30%;
+ }
+ .two .img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+ }
+ .sec-content{
+    padding: 60px;
+    flex-basis: 40%;
+ }
+ .sec-content h3{
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+ }
+ @media only screen and (max-width: 1200px){
+   .buttons{
+      right: 0px;
+    }
+    .top-section{
+      flex-direction: column;
+   }
+    .top-section > div{
+      flex-basis: 100%;
+    }
+    .top-section-right{
+      padding: 40px;
+   }
+    .two{
+        flex-direction: column;
+     }
+    .two > div{
+        flex-basis: 100%
+     }
+ }
